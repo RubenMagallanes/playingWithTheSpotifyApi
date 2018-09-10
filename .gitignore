@@ -9,3 +9,5 @@
 !extractToken.sh
 !getPlaylist.sh
 !getPlaylistTracks.sh
+!getRestOfPagedPlaylist.sh
+
