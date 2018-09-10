@@ -8,3 +8,7 @@ steps to get full playlist JSON:
 - `./requestAppAuth.sh` -> `authResponse` : JSON reposnse from the API
 - `./extractToken.sh` -> `token` : your auth token
 - `./getPlaylist.sh` -> `playlist` : API response with playlist, in JSON
+  
+alternatively
+ - `./getPlaylsitTracks.sh` -> `playlistTracks` : just paging object with tracks 
+  
