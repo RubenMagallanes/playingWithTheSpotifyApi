@@ -1,2 +1,10 @@
-clientId
-clientSecret
+#ignore all
+*
+#except:
+!README.md
+!.gitignore
+!playlistId
+!getBase64sh
+!RequestAppAuth.sh
+!extractToken.sh
+!getPlaylsit.sh
