@@ -1,1 +1,1 @@
-cat authResponse | jq .access_token | tr -d '"' > token
+cat authResponse | jq -r .access_token > token
