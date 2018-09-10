@@ -8,3 +8,4 @@
 !requestAppAuth.sh
 !extractToken.sh
 !getPlaylist.sh
+!getPlaylistTracks.sh
