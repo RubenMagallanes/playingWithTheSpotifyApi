@@ -4,7 +4,7 @@
 !README.md
 !.gitignore
 !playlistId
-!getBase64sh
-!RequestAppAuth.sh
+!genBase64.sh
+!requestAppAuth.sh
 !extractToken.sh
-!getPlaylsit.sh
+!getPlaylist.sh
