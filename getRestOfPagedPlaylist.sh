@@ -1,11 +1,19 @@
-echo '{' > items # topen new json object in new file
-cat playlistTracks | jq '.items' >> items # dump tracks to file
-cat playlsitTracks | jq -r .next > nextUrl # get next page url
-sed -i '$ s/.$//' items # remove trailing ']' so we can keep appending to the array
+# open new json object in new file
+echo '{' > items
 
+# dump tracks array to file
+cat playlistTracks | jq '.items' >> items
+
+# get next page url
+cat playlsitTracks | jq -r .next > nextUrl
+
+# remove trailing ']' so we can keep appending to the array
+sed -i '$ s/.$//' items
+
+#while there is a next page
 while [$(<nextUrl) != 'null']
 do
-	#call api for next page
+	#call api to get next page
 	curl \
 		-X GET $(<nextUrl) \
 		-H "Accept: application/json" \
@@ -18,6 +26,7 @@ do
 
 	#remove first '[' char in file
 	sed -i 's/^.//' itemsTemp
+	
 	# remove trailing ']' so we can keep appending to the array
 	sed -i '$ s/.$//' itemsTemp
 
@@ -27,5 +36,6 @@ do
 	# dump next url to file
 	cat playlistTracks | jq -r .next > nextUrl
 done
-echo ']}' >> items # close array & object
+# close array & object
+echo ']}' >> items 
 
