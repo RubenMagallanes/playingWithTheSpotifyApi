@@ -5,13 +5,13 @@ echo '{' > items
 cat playlistTracks | jq '.items' >> items
 
 # get next page url
-cat playlsitTracks | jq -r .next > nextUrl
+cat playlistTracks | jq -r .next > nextUrl
 
 # remove trailing ']' so we can keep appending to the array
 sed -i '$ s/.$//' items
 
 #while there is a next page
-while [$(<nextUrl) != 'null']
+while [ $(<nextUrl) != 'null' ]
 do
 	#call api to get next page
 	curl \
