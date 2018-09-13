@@ -10,4 +10,4 @@
 !getPlaylist.sh
 !getPlaylistTracks.sh
 !getRestOfPagedPlaylist.sh
-
+!extractTrackIds.sh
