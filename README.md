@@ -11,4 +11,5 @@ steps to get full playlist JSON:
   
 alternatively
  - `./getPlaylsitTracks.sh` -> `playlistTracks` : just paging object with tracks 
-  
+ - `./extractTrackIds.sh` -> `trackNameAndId` : get list of track name & ids from playlist
+
